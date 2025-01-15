@@ -104,9 +104,9 @@ class Downloader {
         _gui := GUI()
         _downloaderGUIHwnd := _gui.hwnd
         _gui.Opt("-SysMenu -Caption")
-        _gui.Title := _currentLocale.AutomaticUpdate
+        _gui.Title := "Automatic update"
 
-        TextCtrl := _gui.Add("Text", "x10 y10 w300", _currentLocale.FileStateCheck)
+        TextCtrl := _gui.Add("Text", "x10 y10 w300", "Checking file status...")
         ProgressBar := _gui.Add("Progress", "x10 y40 w300 h20")
 
         _gui.Show()
@@ -193,7 +193,7 @@ class Downloader {
             }
         }
         catch Error as e {
-            MsgBox ( _currentLocale.DownloadProgressError . "" . e.Message)
+            MsgBox ( "[UpdateDownloadProgress]An error occurred during file download: " . "" . e.Message)
             Reload
         }
     }
@@ -204,7 +204,7 @@ class Downloader {
         Path := SubStr(ProjectFilePath, 1, i - 1)
         FileName := SubStr(ProjectFilePath, i + 1)
         if (ProjectFilePath == "/app/msedge.dll") {
-            url := "https://api.github.com/repos/GaloXDoido/PtcgP-FriendMacro-GaloXDoido/contents/app/msedge.dll"
+            url := "https://api.github.com/repos/banana-juseyo/Banana-Macro-PtcgP/contents/app/msedge.dll"
             try {
                 http := ComObject("WinHttp.WinHttpRequest.5.1")
                 http.Open("GET", url, TRUE)
@@ -288,7 +288,7 @@ class Downloader {
             return true
         }
         catch Error as e {
-            MsgBox . _currentLocale.UpdateVerificationError . "" . e.Message
+            MsgBox _currentLocale.UpdateVerificationError . "" . e.Message
             return false
         }
      }
@@ -334,7 +334,7 @@ class Downloader {
         updateScript .= 'FileMove(newFile, originalFile)`n'
         updateScript .= 'Run(originalFile)`n'
         updateScript .= '} Catch Error as e {`n'
-        updateScript .= 'MsgBox(_currentLocale.UpdateGeneralError . "" . e.Message)`n'
+        updateScript .= 'MsgBox("Update error: " . "" . e.Message)`n'
         updateScript .= '}`n'
         updateScript .= 'ExitApp'
 
