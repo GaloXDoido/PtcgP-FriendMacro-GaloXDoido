@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+
+<body oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
+    <div class="wrap">
+        <div class="headerContainer">
+            <div class="logoContainer">
+                <div class="appLogo"></div>
+            </div>
+            <div class="headerBarContainer">
+                <div class="versionText" id="versionText">v1.00</div>
+                <div class="updateButton">Update Version</div>
+                <div class="homeButton headerButton" id="headerHomeButton">
+                    <div class="homeIcon headerButtonIcon"></div>
+                </div>
+                <div class="restartButton headerButton" id="headerRestartButton">
+                    <div class="restartIcon headerButtonIcon"></div>
+                </div>
+                <div class="quitButton headerButton" id="headerQuitButton">
+                    <div class="quitIcon headerButtonIcon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="logContainer" id="logContainer">
+            <div class="logWrapper" id="logWrapper">
+                <input type="text" class="leadingLogSpan" id="leadingLogSpan" readonly>
+                <hr />
+                <div class="loghistoryContainer" id="logHistoryContainer">
+                    <textarea name="logHistoryTextArea" id="logHistoryTextArea" readonly></textarea>
+                    <textarea name="hiddenTextArea" id="hiddenTextArea"></textarea>
+                    <div class="descriptionContainer">
+                        <span class="descriptionCss" id="descriptionEn">Github Repository:</span>
+                    </div>
+                    <div class="gitHubLinkBR" id="gitHubLinkBR">
+                        <div class="brazilFlag"></div> <span
+                            onClick="githubLinkBR()">https://github.com/GaloXDoido/PtcgP-FriendMacro-GaloXDoido</span>
+                    </div>
+                    <div class="descriptionContainerOriginalCode">
+                        <span class="descriptionCss" id="descriptionEn">This macro was based on this code:</span>
+                    </div>
+                    <div class="gitHubLink" id="gitHubLink">
+                        <div class="banana"></div> <span
+                            onClick="githubLink()">https://github.com/banana-juseyo/Banana-Macro-PtcgP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footerContainer footerStopped" id="footerStopped">
+            <div class="startButton footerButton cta" id="footerStartButton">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel" id="footerStartButtonLabel">▶️</span>
+                    <span class="footerButtonHint">F5</span>
+                </div>
+            </div>
+            <div class="clearFriendsButton footerButton" id="footerClearFriendsButton">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel" id="clearFriendsButtonLabel">👥🗑️</span>
+                    <span class="footerButtonHint">F6</span>
+                </div>
+            </div>
+            <div class="settingsButton footerButton" id="footerSettingsButtonA">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel" id="settingsButtonLabelA">⚙</span>
+                </div>
+            </div>
+        </div>
+        <div class="footerContainer footerPlaying" id="footerPlaying">
+            <div class="pauseButton footerButton" id="footerPauseButton">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel" id="footerPauseButtonLabel">⏸</span>
+                    <span class="footerButtonHint">F5</span>
+                </div>
+            </div>
+            <div class="stopButton footerButton cta" id="footerStopButton">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel cta" id="footerStopButtonLabel">⏹</span>
+                    <span class="footerButtonHint">F7</span>
+                </div>
+            </div>
+            <div class="settingsButton footerButton" id="footerSettingsButtonB">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel" id="settingsButtonLabelB">⚙</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    document.getElementById("headerHomeButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_header_traducao");
+    }
+    document.getElementById("headerRestartButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_header_restart");
+    }
+    document.getElementById("headerQuitButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_header_quit");
+    }
+    document.getElementById("footerStartButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_start");
+    }
+    document.getElementById("footerClearFriendsButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_clear_friends");
+    }
+    document.getElementById("footerSettingsButtonA").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_settings");
+    }
+    document.getElementById("footerPauseButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_pause");
+    }
+    document.getElementById("footerStopButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_stop");
+    }
+    document.getElementById("footerSettingsButtonB").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_settings");
+    }
+
+    function githubLink() {
+        chrome.webview.postMessage("_button_click_header_home");
+    }
+
+    function githubLinkBR() {
+        chrome.webview.postMessage("_button_click_header_traducao");
+    }
+
+    function updateVersionText(version) {
+        const versionText = document.getElementById("versionText")
+        versionText.textContent = version
+    }
+
+    function adjustTextAreaHeight() {
+        const textarea = document.getElementById('logHistoryTextArea');
+        const hiddenTextarea = document.getElementById('hiddenTextArea');
+        hiddenTextarea.value = textarea.value;
+        hiddenTextarea.style.height = 'auto';
+        textarea.style.height = `${hiddenTextarea.scrollHeight}px`;
+    }
+
+    function addLog(message) {
+        const logHistoryTextArea = document.getElementById('logHistoryTextArea');
+        const leadingLogSpan = document.getElementById('leadingLogSpan');
+        if (leadingLogSpan.value) {
+            logHistoryTextArea.value = leadingLogSpan.value + '\n' + logHistoryTextArea.value;
+        }
+        leadingLogSpan.value = message;
+    }
+
+    function SwitchUIMode(playing) {
+        const footerStopped = document.getElementById('footerStopped');
+        const footerPlaying = document.getElementById('footerPlaying');
+        if (playing == '1') {
+            footerStopped.style.display = "none"
+            footerPlaying.style.display = "flex"
+        }
+        if (playing == '0') {
+            footerStopped.style.display = "flex"
+            footerPlaying.style.display = "none"
+        }
+    }
+
+    function SwitchPauseMode(pausing) {
+        const pauseButton = document.getElementById('footerPauseButton')
+        const pauseButtonLabel = document.getElementById('footerPauseButtonLabel')
+        if (pausing == '1') {
+            pauseButtonLabel.textContent = "Retomar"
+            pauseButton.style.backgroundColor = "#DBDBDB"
+        }
+        if (pausing == '0') {
+            pauseButtonLabel.textContent = "Pausar"
+            pauseButton.style.backgroundColor = "#FAFAFA"
+        }
+    }
+
+    document.getElementById("gitHubLink").addEventListener("click", e => {
+        e.preventDefault()
+
+    })
+
+    document.getElementById("gitHubLinkBR").addEventListener("click", e => {
+        e.preventDefault()
+    })
+
+</script>
+
+</html>

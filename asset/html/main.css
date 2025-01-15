@@ -1,0 +1,421 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard';
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    --app-region: drag;
+    -webkit-app-region: drag;
+}
+
+*::selection {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: #dedede;
+}
+
+.wrap {
+    display: flex;
+    width: 560px;
+    padding: 16px 20px 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    border-radius: 8px;
+    background: #E6E7E8;
+}
+
+.headerContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.appLogo {
+    width: 40px;
+    height: 40px;
+    background: url(../image/_app_Icon.png);
+    background-size: cover;
+}
+
+.appBanana {
+    width: 40px;
+    height: 40px;
+    background: url(../image/_app_banana.png);
+    background-size: cover;
+}
+
+.headerBarContainer {
+    display: flex;
+    height: 32px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.versionText {
+    color: rgba(29, 29, 29, 0.4);
+    font-size: 11px;
+}
+
+.updateButton {
+    /* display: flex; */
+    display: none;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 3px;
+    background: #9EF496;
+
+    color: #1D1D1D;
+    font-family: Pretendard;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: 0.2px;
+    /* cursor: pointer; */
+}
+
+.updateButton:hover {
+    background: #8AEA82;
+}
+
+.headerButton {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 3px;
+    /* cursor: pointer; */
+    opacity: 0.3;
+}
+
+.headerButton:hover {
+    background: #DADBDD;
+    opacity: 1;
+}
+
+.headerButtonIcon {
+    width: 32px;
+    height: 32px;
+}
+
+.headerButtonIconBR {
+    width: 32px;
+    height: 32px;
+}
+
+.homeIcon {
+    background: url('../image/_app_Home.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.restartIcon {
+    background: url('../image/_app_Restart.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.quitIcon {
+    background: url('../image/_app_Quit.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#logContainer {
+    height: 280px;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 0px;
+    align-self: stretch;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    border-radius: 4px;
+    background: #F2F3F3;
+
+    --app-region: no-drag;
+    -webkit-app-region: no-drag;
+}
+
+#logWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 12px;
+}
+
+#logHistoryContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+#hiddenTextArea {
+    opacity: 0;
+    position: absolute;
+    left: 500px;
+    width: 100%;
+    height: auto;
+}
+
+#logContainer::-webkit-scrollbar {
+    width: 10px;
+}
+
+#logContainer::-webkit-scrollbar-button {
+    display: none;
+}
+
+#logContainer::-webkit-scrollbar-thumb {
+    background-color: #DADBDD;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+}
+
+#leadingLogSpan {
+    /* height: 48px; */
+    color: #000;
+    font-family: Pretendard;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    align-self: stretch;
+    background: none;
+    border: none;
+}
+
+#leadingLogSpan:focus {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#logHistoryTextArea {
+    width: 100%;
+    height: 100%;
+    align-self: flex-end;
+    background: none;
+    border: none;
+    resize: none;
+}
+
+textarea {
+    color: #5C5C5C;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    -ms-overflow-style: none;
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+#gitHubLink {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+#gitHubLinkBR {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+
+.banana {
+    width: 18px;
+    height: 18px;
+    background-image: url('../image/_app_banana.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.brazilFlag {
+    width: 18px;
+    height: 18px;
+    background-image: url('../image/_app_brazilFlag.png');
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#gitHubLink > span {
+    color: #1C81E6;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#gitHubLinkBR > span {
+    color: #1C81E6;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#logHistoryTextArea:focus {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.logHistory {
+    width: 100%;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.footerContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+
+    --app-region: no-drag;
+    -webkit-app-region: no-drag;
+}
+
+#footerStopped {
+    display: flex;
+}
+
+#footerPlaying {
+    display: none;
+}
+
+.footerButton {
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    flex: 1 1 auto;
+    overflow: hidden;
+
+    border-radius: 4px;
+    background: #FAFAFA;
+    box-shadow: 2px 2px 0px 0px #DFDFDF;
+    cursor: pointer;
+}
+
+.footerButton:hover {
+    background-color: #F2F4F5;
+    box-shadow: none;
+
+}
+
+.footerButton.cta {
+    border-radius: 3px;
+    background: #1D1D1D;
+}
+
+.footerButton.cta:hover {
+    background-color: #292929;
+}
+
+#settingsButton {
+    flex-shrink: 0;
+    max-width: 120px;
+}
+
+.footerButtonHint {
+    color: rgba(29, 29, 29, 0.35);
+    font-size: 11px;
+    line-height: 140%;
+}
+
+.cta .footerButtonHint {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.labelContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    position: absolute;
+}
+
+.footerButtonLabel {
+    color: #1D1D1D;
+    font-family: Pretendard;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+.descriptionCss {
+    font-size: 15px;
+}
+
+.descriptionContainerOriginalCode {
+    padding-top: 15px;
+}
+
+.footerButtonLabel.cta {
+    color: #FFF;
+    font-family: Pretendard;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+}
