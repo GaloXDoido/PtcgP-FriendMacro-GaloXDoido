@@ -1,6 +1,0 @@
-﻿[2025-01-15 14:36:55] No update needed
-[2025-01-15 14:36:56] Debug messages will be displayed here.
-[2025-01-15 14:36:56] Original author GitHub repository link below:
-[2025-01-15 14:36:56] Translated and Adapted by GaloXDoido
-[2025-01-15 14:36:56] PtcgP FriendMacro v1.02 by GaloXDoido
-[2025-01-15 14:36:56] Initialization complete
