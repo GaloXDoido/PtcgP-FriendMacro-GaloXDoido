@@ -80,7 +80,7 @@ DownloaderInstance.CheckMsedgeDLL()
 updateScriptPath := A_Temp "\updater.ahk"
 if FileExist(updateScriptPath)
     FileDelete(updateScriptPath)
-; DownloaderInstance.CheckForUpdates()
+ DownloaderInstance.CheckForUpdates()
 
 class Downloader {
     gui := ""
@@ -262,36 +262,36 @@ class Downloader {
     }
 
     ; Verificar a versão mais recente do script
-    ; CheckForUpdates() {
-    ;     url := "https://api.github.com/repos/GaloXDoido/PtcgP-FriendMacro-GaloXDoido/releases/latest"
-    ;     try {
-    ;         http := ComObject("WinHttp.WinHttpRequest.5.1")
-    ;         http.Open("GET", url, true)
-    ;         http.Send()
-    ;         http.WaitForResponse()
-    ;        response := http.ResponseText
-    ;        response := Jxon_Load(&response)
-    ;        latestVersion := response["tag_name"]
-    ;        if (latestVersion != _currentVersion) {
-    ;            ; Caso seja necessário atualizar
-    ;            fileInfo := Map(
-    ;                "isAvailable", TRUE,
-    ;                "fileName", response["assets"][1]["name"],
-    ;                "destination", tempFile := A_Temp,
-    ;                "fullPath", tempFile := A_Temp "\" A_ScriptName ".new",
-    ;                "downloadUrl", response["assets"][1]["browser_download_url"],
-    ;                "size", response["assets"][1]["size"]
-    ;            )
-    ;            return this.PerformUpdate(fileInfo)
-    ;        }
-    ;        ; Caso não seja necessário atualizar
-    ;        return true
-    ;    }
-    ;    catch Error as e {
-    ;        MsgBox . _currentLocale.UpdateVerificationError . "" . e.Message
-    ;        return false
-    ;    }
-    ; }
+     CheckForUpdates() {
+         url := "https://api.github.com/repos/GaloXDoido/PtcgP-FriendMacro-GaloXDoido/releases/latest"
+         try {
+             http := ComObject("WinHttp.WinHttpRequest.5.1")
+             http.Open("GET", url, true)
+             http.Send()
+             http.WaitForResponse()
+            response := http.ResponseText
+            response := Jxon_Load(&response)
+            latestVersion := response["tag_name"]
+            if (latestVersion != _currentVersion) {
+                ; Caso seja necessário atualizar
+                fileInfo := Map(
+                    "isAvailable", TRUE,
+                    "fileName", response["assets"][1]["name"],
+                    "destination", tempFile := A_Temp,
+                    "fullPath", tempFile := A_Temp "\" A_ScriptName ".new",
+                    "downloadUrl", response["assets"][1]["browser_download_url"],
+                    "size", response["assets"][1]["size"]
+                )
+                return this.PerformUpdate(fileInfo)
+            }
+            ; Caso não seja necessário atualizar
+            return true
+        }
+        catch Error as e {
+            MsgBox . _currentLocale.UpdateVerificationError . "" . e.Message
+            return false
+        }
+     }
 
     ; Executar atualização
     PerformUpdate(FileInfo) {
