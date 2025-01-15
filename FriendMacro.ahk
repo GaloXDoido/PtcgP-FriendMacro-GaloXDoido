@@ -204,7 +204,7 @@ class Downloader {
         Path := SubStr(ProjectFilePath, 1, i - 1)
         FileName := SubStr(ProjectFilePath, i + 1)
         if (ProjectFilePath == "/app/msedge.dll") {
-            url := "https://api.github.com/repos/banana-juseyo/Banana-Macro-PtcgP/contents/app/msedge.dll"
+            url := "https://api.github.com/repos/GaloXDoido/PtcgP-FriendMacro-GaloXDoido/contents/app/msedge.dll"
             try {
                 http := ComObject("WinHttp.WinHttpRequest.5.1")
                 http.Open("GET", url, TRUE)
