@@ -11,7 +11,7 @@ The code was heavily based on the open-source macro "Banana Macro PtcgP," create
 I completely adapted the logic of the original Korean code to remove certain restrictions related to exclusive use by specific users and added localization for English, Spanish, and Brazilian Portuguese, along with a few other modifications.
 
 이 코드는 banana-juseyo가 작성한 원본 코드를 기반으로 했습니다. 감사합니다!
-
+#
 **__How can I get it working?__**
 
 The steps to use this macro are basically the same as [Arturo's Pokémon Trading Card Game Pocket Bot](https://github.com/Arturo-1212/PTCGPB), so I will take the liberty of reproducing the same steps here, with some relevant modifications.
@@ -56,7 +56,7 @@ Step 5:
 - Extract it by Right clicking the zip > extract
 
 Step 6: 
-- Run FriendMacro.ahk
+- Run __FriendMacro.ahk__
 - **On first run after pressing start, if prompted for super user access in each instance, select to allow forever.**
 
   
@@ -75,34 +75,39 @@ Step 7: Click on the Cogwheel button (⚙) and input your script settings
 
 Step 8: Choose a button to start the macro:
 
-"Start" Button (▶️): Begins by accepting friend requests.
-"Start from Friend Deletion" Button (The 👥🗑️ button): First clears the friend list, then automatically starts accepting requests.
-- **Allow adb to run and through the firewall if it asks you**
+- "Start" Button (▶️): Begins by accepting friend requests.
+
+- "Start from Friend Deletion" Button (The 👥🗑️ button): First clears the friend list, then automatically starts accepting requests.
+  
+ **Allow adb to run and through the firewall if it asks you**
 
 
 # FAQ
 
-Q: Does it work on resolutions other than 1920x1080?
-A: It has not been tested on any other resolutions, but the Windows scaling must be set to 100% for it to work correctly.
+__Q: Does it work on resolutions other than 1920x1080?__
 
-Q: Can it be used with multiple instances?
+A: It has not been tested on any other resolutions, but the Windows scaling __must be set to 100%__ for it to work correctly.
+
+__Q: Can it be used with multiple instances?__
+
 A: It hasn't been officially tested, but it is possible to copy multiple folders and run them. Some users have reported minor issues, but overall it works well.
 
-Q: "Error while update" appears when starting the macro.
+__Q: "Error while update" appears when starting the macro.__
+
 A: This can happen due to issues during the automatic update process. Re-download the macro file and try again.
 
 
 # Modification and Redistribution
 
-This project, as well as the original project it is based on, is licensed under GPL-3.0, allowing modifications and redistribution, provided that proper credit is given to both the original author, banana-juseyo, and myself.
+This project, as well as the original project it is based on, is licensed under GPL-3.0, allowing modifications and redistribution, provided that proper credit is given to both the original author, __banana-juseyo__, and __myself__.
 
 # Credits
 
 Technical Contributions:
 
- - "banana-juseyo" for the original code on which this macro is based
+ - __"banana-juseyo"__ for the original code on which this macro is based
     [Repository](https://github.com/banana-juseyo/Banana-Macro-PtcgP)
- - "thqby" for WebView2 control in AutoHotkey
+ - __"thqby"__ for WebView2 control in AutoHotkey
     [Repository](https://github.com/thqby/ahk2_lib)
- - "TheArkive" for JXON_ahk2
+ - __"TheArkive"__ for JXON_ahk2
     [Repository](https://github.com/TheArkive/JXON_ahk2)
