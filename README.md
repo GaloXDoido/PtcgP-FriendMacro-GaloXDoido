@@ -22,11 +22,11 @@ The steps to use this macro are basically the same as [Arturo's Pokémon Trading
 
 __ATTENTION!!__
 
-This script __REQUIRES AutoHotKey v2.0__, if you're using Arthuro's bot, you NEED to install the updated AutoHotKey 2.0 version to use this script. 
+This script __REQUIRES AutoHotKey v2.0__. If you're using Arthuro's bot, you MUST install the updated AutoHotKey 2.0 version to use this script.
 
-Do not worry, Arthuro's bot will keep working, since AutoHotKey supports more than one version installed at the same time on windows.
+Don't worry — Arthuro's bot will continue to work, as AutoHotKey supports having multiple versions installed simultaneously on Windows.
 
-If you try to run this script with older AHK versions, it will not open at all.
+If you try to run this script with an older AHK version, __it won't open at all__.
 
 #
 
