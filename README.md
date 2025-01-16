@@ -20,12 +20,15 @@ If you liked it and want to support me in any way, please leave a like on my exh
 
 The steps to use this macro are basically the same as [Arturo's Pokémon Trading Card Game Pocket Bot](https://github.com/Arturo-1212/PTCGPB), so I will take the liberty of reproducing the same steps here, with some relevant modifications.
 
-__ATTENTION!!__ This script REQUIRES AutoHotKey v2.0, if you're using Arthuro's bot, you NEED to install the updated AutoHotKey 2.0 version to use this script. 
+__ATTENTION!!__
+
+This script __REQUIRES AutoHotKey v2.0__, if you're using Arthuro's bot, you NEED to install the updated AutoHotKey 2.0 version to use this script. 
 
 Do not worry, Arthuro's bot will keep working, since AutoHotKey supports more than one version installed at the same time on windows.
 
 If you try to run this script with older AHK versions, it will not open at all.
 
+#
 
 Step 1: Install the necessary programs
 - [AutoHotKey v2.0](https://www.autohotkey.com/download/ahk-v2.exe) (It needs to be version 2.0. The macro will not run if you are using earlier versions of AHK.)
