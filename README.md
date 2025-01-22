@@ -1,5 +1,5 @@
 
-<img align="center">![PtcgP FriendMacro By GaloXDoido](https://github.com/user-attachments/assets/2acb1bf3-bd4a-4415-ad6f-f9856a35a8f0)</img>
+<img align="center">![PtcgP FriendMacro By GaloXDoido](https://github.com/user-attachments/assets/9655286b-28e2-42c3-aea3-238664d91d1f)</img>
 
 Video of usage
 
