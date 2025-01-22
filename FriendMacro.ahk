@@ -2,7 +2,7 @@
  * @description PtcgP FriendMacro by GaloXDoido
  * @author GaloXDoido (Original Code by Banana-juseyo)
  * @date 2025/01/15
- * @version 1.05
+ * @version 1.06
  * @see {@link https://github.com/GaloXDoido/PtcgP-FriendMacro-GaloXDoido Github Repository of this version}
  * @see {@link https://github.com/banana-juseyo/Banana-Macro-PtcgP Github Repository of Original Code}
  ***********************************************************************/
@@ -15,7 +15,7 @@
 
 global _appTitle := "PtcgP FriendMacro"
 global _author := "GaloXDoido (Original Code by Banana-juseyo)"
-global _currentVersion := "v1.05"
+global _currentVersion := "v1.06"
 global _website := "https://github.com/banana-juseyo/Banana-Macro-PtcgP"
 global _websiteBR := "https://github.com/GaloXDoido/PtcgP-FriendMacro-GaloXDoido"
 global _repoName := "PtcgP-FriendMacro-GaloXDoido"
