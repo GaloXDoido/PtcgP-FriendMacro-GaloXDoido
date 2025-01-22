@@ -72,8 +72,9 @@ Step 6:
 - Run __FriendMacro.ahk__
 - **On first run after pressing start, if prompted for super user access in each instance, select to allow forever.**
 
-  
-![FriendMacro Interface](https://github.com/user-attachments/assets/91b203f5-bcae-4de9-a89a-17f5265bc201)
+
+![FriendMacro Interface](https://github.com/user-attachments/assets/9e0d72a9-1296-4b46-b6e4-ac4077c17891)
+
 
 FriendMacro's Interface
 
@@ -89,6 +90,8 @@ Step 7: Click on the Cogwheel button (⚙) and input your script settings
 Step 8: Choose a button to start the macro:
 
 - "Start" Button (▶️): Begins by accepting friend requests.
+
+- "Start Without Friend Deletion Phase" Button (The ▶️🗑️🚫 button): Forever accepting requests, never entering the deletion phase.
 
 - "Start from Friend Deletion" Button (The 👥🗑️ button): First clears the friend list, then automatically starts accepting requests.
   
