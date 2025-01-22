@@ -57,6 +57,12 @@
                     <span class="footerButtonHint">F5</span>
                 </div>
             </div>
+            <div class="startButton footerButton cta" id="footerStartWoDeletingButton">
+                <div class="labelContainer">
+                    <span class="footerButtonLabel" id="footerStartButtonLabel">▶️🗑️🚫</span>
+                    <span class="footerButtonHint"></span>
+                </div>
+            </div>
             <div class="clearFriendsButton footerButton" id="footerClearFriendsButton">
                 <div class="labelContainer">
                     <span class="footerButtonLabel" id="clearFriendsButtonLabel">👥🗑️</span>
@@ -103,6 +109,9 @@
     }
     document.getElementById("footerStartButton").onclick = function () {
         chrome.webview.postMessage("_button_click_footer_start");
+    }
+    document.getElementById("footerStartWoDeletingButton").onclick = function () {
+        chrome.webview.postMessage("_button_click_footer_start_wo_deleting");
     }
     document.getElementById("footerClearFriendsButton").onclick = function () {
         chrome.webview.postMessage("_button_click_footer_clear_friends");

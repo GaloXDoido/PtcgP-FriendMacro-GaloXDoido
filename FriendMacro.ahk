@@ -403,6 +403,11 @@ HandleWebMessageReceived(sender, args) {
         case "_button_click_footer_start":
             SetTimer(() => StartRun("00"), -1)
             return
+        case "_button_click_footer_start_wo_deleting":
+            _acceptingTermConfig := 90000000000000
+            IniWrite 90000000000000, "Settings.ini", "UserSettings", "AcceptingTerm"
+            SetTimer(() => StartRun("00"), -1)
+            return
         case "_button_click_footer_clear_friends":
             SetTimer(() => StartRun("D00"), -1)
             return
@@ -1094,9 +1099,9 @@ _main(_currentLogic := "00") {
                     ; _statusMsg("match = 1")
                     targetX := matchedX - targetWindowX
                     targetY := matchedY - targetWindowY
-                    ControlClick('X' . targetX . ' Y' . targetY, targetWindowHwnd, , 'Left', 1, 'NA', ,)
+                    ControlClick('X' . targetX . ' Y' . targetY + 50, targetWindowHwnd, , 'Left', 1, 'NA', ,)
                     delayShort()
-                    ControlClick('X' . targetX . ' Y' . targetY, targetWindowHwnd, , 'Left', 1, 'NA', ,)
+                    ControlClick('X' . targetX . ' Y' . targetY + 50, targetWindowHwnd, , 'Left', 1, 'NA', ,)
                     _currentLogic := "D02"
                     _thisUserDeleted := FALSE
                     failCount := 0
