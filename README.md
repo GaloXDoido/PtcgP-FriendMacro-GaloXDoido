@@ -1,3 +1,12 @@
+# Important
+
+After the Dialga and Palkia booster update, the game rebalanced the way godpacks were distributed to people in the Wonder Pick, making this script irrelevant or unusable. 
+
+The last modification made is to provide a final QoL maintenance for reference purposes to ensure functionality if someone wants to use it as a base for another macro in the future, but further maintenance or implementations are now concluded.
+
+
+#
+
 
 <img align="center">![PtcgP FriendMacro By GaloXDoido](https://github.com/user-attachments/assets/9655286b-28e2-42c3-aea3-238664d91d1f)</img>
 
