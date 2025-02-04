@@ -1,7 +1,7 @@
 /************************************************************************
  * @description PtcgP FriendMacro by GaloXDoido
  * @author GaloXDoido (Original Code by Banana-juseyo)
- * @date 2025/01/15
+ * @date 2025/02/04
  * @version 1.10
  * @see {@link https://github.com/GaloXDoido/PtcgP-FriendMacro-GaloXDoido Github Repository of this version}
  * @see {@link https://github.com/banana-juseyo/Banana-Macro-PtcgP Github Repository of Original Code}
