@@ -18,7 +18,7 @@ global _author := "GaloXDoido (Original Code by Banana-juseyo)"
 global _currentVersion := "v1.06"
 global _website := "https://github.com/banana-juseyo/Banana-Macro-PtcgP"
 global _websiteBR := "https://github.com/GaloXDoido/PtcgP-FriendMacro-GaloXDoido"
-global _repoName := "PtcgP-FriendMacro-GaloXDoido"
+global _repoName := "Banana-Macro-PtcgP"
 
 #Requires AutoHotkey v2.0
 #Include .\app\WebView2.ahk
@@ -204,7 +204,7 @@ class Downloader {
         Path := SubStr(ProjectFilePath, 1, i - 1)
         FileName := SubStr(ProjectFilePath, i + 1)
         if (ProjectFilePath == "/app/msedge.dll") {
-            url := "https://api.github.com/repos/GaloXDoido/PtcgP-FriendMacro-GaloXDoido/contents/app/msedge.dll"
+            url := "https://api.github.com/repos/banana-juseyo/Banana-Macro-PtcgP/contents/app/msedge.dll"
             try {
                 http := ComObject("WinHttp.WinHttpRequest.5.1")
                 http.Open("GET", url, TRUE)
@@ -231,7 +231,7 @@ class Downloader {
                 return Map("isAvailable", false)
             }
         } else {
-            url := "https://api.github.com/repos/GaloXDoido/" . _repoName . "/contents" . Path
+            url := "https://api.github.com/repos/banana-juseyo/" . _repoName . "/contents" . Path
             try {
                 http := ComObject("WinHttp.WinHttpRequest.5.1")
                 http.Open("GET", url, TRUE)
